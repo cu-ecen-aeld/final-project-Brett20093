@@ -1,0 +1,2 @@
+make raspberrypi4_64_defconfig
+make
