@@ -1,15 +1,17 @@
 #!/bin/bash
-#Script to run QEMU for buildroot as the default configuration qemu_aarch64_virt_defconfig
-#Host forwarding: Host Port 10022 ->> QEMU Port 22 
-#Author: Siddhant Jajoo.
+#Script to run QEMU for buildroot project (qemu v11.0.4)
+#Author: Brett Lange
 
+qemu-img resize buildroot/output/images/sdcard.img 256M
+qemu-img resize buildroot/output/images/Image 4G
 
 qemu-system-aarch64 \
-    -M virt  \
-    -cpu cortex-a53 -nographic -smp 1 \
+    -machine raspi4b  \
+    -cpu cortex-a72 \
+    -m 2G \
+    -smp 4 \
     -kernel buildroot/output/images/Image \
-    -append "rootwait root=/dev/vda console=ttyAMA0" \
-    -netdev user,id=eth0,hostfwd=tcp::10022-:22 \
-    -device virtio-net-device,netdev=eth0 \
-    -drive file=buildroot/output/images/rootfs.ext4,if=none,format=raw,id=hd0 \
-    -device virtio-blk-device,drive=hd0 -device virtio-rng-pci
+    -dtb buildroot/output/images/bcm2711-rpi-4-b.dtb \
+    -drive file=buildroot/output/images/sdcard.img,if=sd,format=raw \
+    -append "rw earlyprintk loglevel=8 console=ttyAMA0,115200 root=/dev/mmcblk0p2 rootwait" \
+    -nographic
