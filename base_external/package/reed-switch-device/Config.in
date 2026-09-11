@@ -1,0 +1,5 @@
+
+config BR2_PACKAGE_REED_SWITCH_DEVICE
+	bool "reed-switch-device"
+	help
+	  Includes the reed switch driver
