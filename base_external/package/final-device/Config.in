@@ -1,0 +1,5 @@
+
+config BR2_PACKAGE_FINAL_DEVICE
+	bool "final-device"
+	help
+	  Includes the final device drivers and application
