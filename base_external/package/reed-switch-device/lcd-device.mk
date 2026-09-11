@@ -4,7 +4,7 @@
 #
 ##############################################################
 
-REED_SWITCH_DEVICE_VERSION = 1033a8d9899d5d6b6b505e9be41565e8231a5db5
+REED_SWITCH_DEVICE_VERSION = 4cac1d59faa524978dcb91af9a3f7ef2cf799c28
 REED_SWITCH_DEVICE_SITE = git@github.com:Brett20093/ECEA-5307-Final-Project-Devices.git
 REED_SWITCH_DEVICE_SITE_METHOD = git
 REED_SWITCH_DEVICE_GIT_SUBMODULES = YES

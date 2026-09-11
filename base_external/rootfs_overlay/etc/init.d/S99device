@@ -1,0 +1,19 @@
+#!/bin/sh
+
+MOD_PATH="/lib/modules/$(uname -r)/extra/"
+
+case "$1" in
+    start)
+	    echo "Load devices"
+		modprobe reed_switch
+		;;
+	stop)
+	    echo "Unload devices"
+		modprobe -r reed_switch
+		;;
+	*)
+	    echo "Usage: $0 {start|stop}"
+	exit 1
+esac
+
+exit 0
