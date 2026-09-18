@@ -22,3 +22,10 @@ GPIO 18 (pin 12) -> Reed Switch wire 2
 (Reed Switch)
  |
 GND
+
+### I2C LCD Display
+
+GND -> GND
+VCC -> 5V
+SDA -> GPIO 2 (SDA1)
+SCL -> GPIO 3 (SCL1)
