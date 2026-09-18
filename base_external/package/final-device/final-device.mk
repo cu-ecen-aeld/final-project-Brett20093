@@ -14,7 +14,7 @@ FINAL_DEVICE_MODULE_SUBDIRS = reed-switch freezer-monitor lcd
 define FINAL_DEVICE_BUILD_CMDS
 	$(MAKE) -C $(LINUX_DIR) M=$(@D)/reed-switch $(LINUX_MAKE_FLAGS) modules
 	$(MAKE) -C $(LINUX_DIR) M=$(@D)/lcd $(LINUX_MAKE_FLAGS) modules
-	$(MAKE) $(TARGET_CONFIGURE_OPTS) -C $(@D)/freezer-monitor all
+	$(MAKE) $(TARGET_CONFIGURE_OPTS) CFLAGS="-O0 -g -Wall -Werror -I$(@D)/lcd" -C $(@D)/freezer-monitor all
 endef
 
 # Install
