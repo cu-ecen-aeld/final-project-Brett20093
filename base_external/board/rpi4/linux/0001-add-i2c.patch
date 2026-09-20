@@ -10,4 +10,9 @@
 +        compatible = "geeekpi,lcd1602";
 +        reg = <0x27>;
 +    };
++
++    mcp9808@18 {
++        compatible = "adafruit,mcp9808";
++        reg = <0x18>;
++    };
 +};
