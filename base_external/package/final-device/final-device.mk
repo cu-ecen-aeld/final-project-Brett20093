@@ -4,7 +4,7 @@
 #
 ##############################################################
 
-FINAL_DEVICE_VERSION = 46b520017500544f4727182b9eab9e88ef1211bd
+FINAL_DEVICE_VERSION = b09dc5a40fa526a79c32f4e0678946335e0de004
 FINAL_DEVICE_SITE = git@github.com:Brett20093/ECEA-5307-Final-Project-Devices.git
 FINAL_DEVICE_SITE_METHOD = git
 FINAL_DEVICE_GIT_SUBMODULES = YES
