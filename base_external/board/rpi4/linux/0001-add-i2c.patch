@@ -1,6 +1,6 @@
 --- a/arch/arm64/boot/dts/broadcom/bcm2711-rpi-4-b.dts
 +++ b/arch/arm64/boot/dts/broadcom/bcm2711-rpi-4-b.dts
-@@ -1 +1,10 @@
+@@ -1 +1,15 @@
  #include "../../../../arm/boot/dts/bcm2711-rpi-4-b.dts"
 +
 +&i2c1 {
@@ -9,5 +9,10 @@
 +    lcd1602@27 {
 +        compatible = "geeekpi,lcd1602";
 +        reg = <0x27>;
++    };
++
++    mcp9808@18 {
++        compatible = "adafruit,mcp9808";
++        reg = <0x18>;
 +    };
 +};
