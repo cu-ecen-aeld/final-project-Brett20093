@@ -23,7 +23,30 @@ GPIO 18 (pin 12) -> Reed Switch wire 2
  |
 GND
 
+## Buzzer
+
+GND -> Buzzer black wire
+3.3v -> 10kΩ resistor -> GPIO 23 (pin 16)
+GPIO 23 (pin 16) -> Buzzer red wire
+
+3.3V
+ |
+[10k]
+ |
+ +------ GPIO18
+ |
+(Reed Switch)
+ |
+GND
+
 ### I2C LCD Display
+
+GND -> GND
+VCC -> 5V
+SDA -> GPIO 2 (SDA1)
+SCL -> GPIO 3 (SCL1)
+
+### MCP9808
 
 GND -> GND
 VCC -> 5V
